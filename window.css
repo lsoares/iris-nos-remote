@@ -1,0 +1,301 @@
+html, body, #gui {margin:0;padding:0;height:100%;}
+
+.grayscale {
+	-webkit-filter: grayscale(1);
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#zapping {
+    background: none;
+}
+
+#mainRc {
+  position: fixed;
+  right: 10px;
+  top: 40px;
+}
+#mainRc button {
+  margin: 4px;
+}
+
+#mainRc .cima, #mainRc .baixo {
+  margin-left: 32px;
+}
+
+.chWrapper {
+	display: inline-block;
+	width: 150px;
+	border-radius: 4px;
+	margin: 4px;
+	position: relative;
+}
+
+.chLogo {
+	margin: 8px;
+	max-height: 48px;
+    max-width: 120px;
+}
+
+.chWrapper:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.chWrapper.selected {
+    background-color: red;
+}
+
+.boxes {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+}
+
+#boxSelect .ui-button-text-only .ui-button-text {
+    padding: 1px 3px;
+}
+
+#boxSelect {
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+#channels {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 60%;
+    margin-right: 24px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.action {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+.action:hover {
+	cursor: pointer;
+}
+
+.fav {
+    background-image: url('star.png');
+}
+
+#rec {
+    background-image: url('rec.png');
+}
+
+#beggining {
+    background-image: url('restart.png');
+}
+
+#seek > * {
+	vertical-align: middle;
+}
+
+.cmd {
+    width: 16px;
+    height: 16px;
+    display: block;
+    opacity: 0.7;
+    margin: 2px;
+}
+.cmd:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#searchBox {
+    border-radius: 4px;
+    background-color: #ddd;
+	opacity: 0.4;
+    position: fixed;
+    top: 4px;
+    right: 12px;
+    background-image: url('search.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#searchBox:hover {
+   opacity: 0.7;
+}
+
+
+#searchBox:focus {
+   opacity: 1;
+}
+
+#loader {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 48px;
+}
+
+#erro {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 400px;
+    font-size: 140%;
+    display: none;
+}
+
+#erro .tentar {
+    margin-top: 25px;
+    color: lightblue;
+}
+
+#erro .tentar:hover {
+    cursor: pointer;
+	text-decoration: underline;
+}
+
+#info a {
+	color: gray;
+}
+
+#info {
+    position: fixed;
+    right: 8px;
+    bottom: 50px;
+    font-size: 9px;
+}
+
+.detail {
+	border-radius : 6px;
+	padding: 8px;
+}
+
+.detail .channelImage {
+	max-width: 80px;
+	opacity: 0.7;
+}
+
+.detail .channelImageWrapper {
+	background-color: rgba(0,0,0, .1);
+	padding: 4px;
+	border-radius: 3px;
+	top: 16px;
+	right: 16px;
+	position: absolute;
+}
+
+.detail .programImageWrapper {
+	margin: 8px 0;
+	position: relative;
+	display: inline-block;
+	min-height: 50px;
+}
+
+.detail .programImage {
+	display: inline-block;
+	border-radius : 6px;
+}
+
+.detail .progress {
+    margin-top: 4px;
+    height: 8px;
+    background-color: green;
+    border-radius: 3px;
+}
+
+.detail .programName {
+    font-size: 22px;
+	font-weight: bold;
+}
+.detail .programNameSub {
+	display: block;
+	font-size: 18px;
+}
+
+.detail .time {
+    font-weight: bold;
+    color: white;
+    font-size: 90%;
+}
+
+.detail .top , .detail  .programImage {
+   width: 350px;
+}
+
+#currentOverlay {
+	position: absolute;
+	display: none;
+	z-index: 1000;
+	background-color: gray;
+}
+
+#controlPanel {
+	display: inline-block;
+	background-color: #ddd;
+	color : black;
+	max-width: 380px;
+}
+
+#chUpDown {
+	position: fixed;
+	right: 8px;
+	top: 50%;
+}
+
+#chUpDown button {
+    margin-bottom: 8px;
+    display: block;
+}
+
+#volume {
+	margin-left: 4px;
+	display: inline-block;
+}
+#volumeSlider {
+    height: 128px;
+}
+#mute {
+}
+
+.channelImage:hover {
+	cursor: pointer;
+}
+
+#epg {
+	display: none;
+	position : fixed;
+	top: 20px;
+	right: 40px;
+	border-radius : 6px;
+	padding: 8px;
+	background-color: #bbb;
+	width: 300px;
+	z-index: 1000;
+}
+#epg .progName {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.favoritePic {
+	border-radius: 4px;
+	width: 80px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.65;
+	border: 2px solid #ddd;
+}
+
+.favoritePic:hover {
+	opacity: 1;
+	border: 2px solid white;
+}

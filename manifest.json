@@ -1,0 +1,21 @@
+{
+	"name": "IRIS NOS Control Panel",
+	"short_name": "IRIS NOS Remote",
+	"description": "Controlo remoto das boxes IRIS a partir do browser",
+	"version": "1.3.0",
+	"manifest_version": 2,
+	"app": {
+		"background": {
+			"scripts": ["jquery.js", "jquery.ajaxq.js", "util.js", "nos.js", "background.js"]
+		}
+	},
+	"permissions": [
+		"http://a212-113-188-171.cpe.netcabo.pt/**",
+		"notifications",
+		"storage",
+		"alarms"
+	],
+	"icons": {
+        "128": "icon128.png"
+	}
+}

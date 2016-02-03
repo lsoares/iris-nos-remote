@@ -1,0 +1,79 @@
+=============== LISTA CANAIS ==================================================
+POST http://212.113.188.171/7085C6DB86B6/ChannelListService/control/
+SOAPACTION "urn:schemas-nds-com:service:Channel-List:1#GetChannelListDetail"
+
+<?xml version="1.0" encoding="utf-8"?> 
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<u:GetChannelListDetail xmlns:u="urn:schemas-nds-com:service:Channel-List:1">
+<uuid>uuid:F80B7487-6622-4F91-AE51-CADB783A3AEF</uuid>
+<channelListId>a2214641</channelListId>
+<locator>dvb://36.42.644</locator>
+<channelNumber>81</channelNumber>
+</u:GetChannelListDetail>
+ </s:Body>
+</s:Envelope>
+
+
+
+=============== CANAL UP/DOWN ==================================================
+POST http://212.113.188.171/7085C6DB86B6/RemoteControlService/control/
+SOAPACTION  "urn:schemas-nds-com:service:Remote-Control:1#SendKey"
+Content-Type text/xml; charset="utf-8"
+
+<?xml version="1.0" encoding="utf-8"?> 
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<u:SendKey xmlns:u="urn:schemas-nds-com:service:Remote-Control:1">
+<uuid>uuid:8863CAA7-BB33-4611-AFAD-730280622589</uuid>
+<key>57600</key>
+</u:SendKey>
+ </s:Body>
+</s:Envelope>
+
+
+<?xml version="1.0" encoding="utf-8"?> 
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<u:SendKey xmlns:u="urn:schemas-nds-com:service:Remote-Control:1">
+<uuid>uuid:8863CAA7-BB33-4611-AFAD-730280622589</uuid>
+<key>57601</key>
+</u:SendKey>
+ </s:Body>
+</s:Envelope>
+
+
+
+=============== SET CANAL ==================================================
+POST http://212.113.188.171/7085C6DB86B6/ChannelSelectionService/control/
+SOAPACTION: "urn:schemas-nds-com:service:Channel-Selection:1#SetSelectedChannel"
+
+<?xml version="1.0" encoding="utf-8"?> 
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<u:SetSelectedChannel xmlns:u="urn:schemas-nds-com:service:Channel-Selection:1">
+<uuid>uuid:F80B7487-6622-4F91-AE51-CADB783A3AEF</uuid>
+<channelListId>a2214641</channelListId>
+<locator>dvb://36.24.32d</locator>
+<channelNumber>3</channelNumber>
+</u:SetSelectedChannel>
+ </s:Body>
+</s:Envelope>
+
+
+
+=============== VOLUME ==================================================
+POST http://212.113.188.171/7085C6DB86B6/VolumeService/control/
+SOAPACTION urn:schemas-nds-com:service:Volume:1#SetVolumeLevel
+
+<?xml version="1.0" encoding="utf-8"?> 
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<u:SetVolumeLevel xmlns:u="urn:schemas-nds-com:service:Volume:1">
+<uuid>uuid:F80B7487-6622-4F91-AE51-CADB783A3AEF</uuid>
+<level>1</level>
+</u:SetVolumeLevel>
+ </s:Body>
+</s:Envelope>
+
+

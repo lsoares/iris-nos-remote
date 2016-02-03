@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='pt'>
+  <head>
+    <title>IRIS Control Panel</title>
+	<meta charset="utf-8"></meta>
+    <link rel='stylesheet' type='text/css' href='css/ui-darkness/jquery-ui.css'></link>
+	<link rel='stylesheet' type='text/css' href='window.css'></link>
+	<script src='jquery.js'></script>
+	<script src='jquery.ajaxq.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script src='util.js'></script>
+	<script src='nos.js'></script>
+	<script src='window.js'></script>
+  </head>
+  <body>
+
+	<div id='gui'>
+	  
+		<div class='boxes'>
+			<div id='boxSelect'></div>
+			<button id='power' class="ui-icon ui-icon-power"
+					data-fn='_power' title='Ligar/desligar box'></span>
+		</div>
+		
+		<div id='mainRc'>
+		  <button class='tras ui-icon ui-icon-arrowreturn-1-w' data-fn='_back' title='Trás (End)'></button>
+		  <button class='menu ui-icon ui-icon-gear' data-fn='_menu' title='Menu (Home)'></button><br/>
+		  
+		  <button class='cima ui-icon ui-icon-arrow-1-n' data-fn='_up' title='Cima (↑)'></button><br/>
+		  <button class='esquerda ui-icon ui-icon-arrow-1-w' data-fn='_left' title='Esquerda (←)'></button>
+		  <button class='ok ui-icon ui-icon-check' data-fn='_ok' title='OK (Enter)'></button>
+		  <button class='direita ui-icon ui-icon-arrow-1-e' data-fn='_right' title='Direita (→)'></button><br/>
+		  <button class='baixo ui-icon ui-icon-arrow-1-s' data-fn='_down' title='Baixo (↓)'></button>
+	  </div>
+	  
+
+		<input id='searchBox' placeholder='Procurar programa..'></input>
+
+		<div id='chUpDown'>
+			<button class="ui-icon ui-icon-circle-plus"
+					data-fn='chUp' title='Canal acima' />
+			<button class="ui-icon ui-icon-circle-minus"
+					data-fn='chDown' title='Canal abaixo' />
+			<button class='ui-icon' id='zapping'
+					data-fn='zapping' title='Zapping'></button>
+		</div>
+
+		<div id='currentOverlay' class='detail'>
+			<div class='top'>
+				<img class='channelImage'></img>
+				<span class='programName'></span>
+			</div>
+			<img class='programImage'></img>
+			<div class='progress'></div>
+		</div>
+
+		<div id='channels'></div>
+
+		<div id='controlPanel' class='detail'>
+			<span class='programName'></span>
+			<span class='programNameSub'></span>
+			<div class='programImageWrapper'>
+				<div class='channelImageWrapper'>
+					<img class='channelImage'></img>
+				</div>
+				<img class='programImage'></img>
+			</div>
+			<div id='volume'>
+				<div id='volumeSlider' title='Volume'></div>
+				<button id='mute' class='ui-icon ui-icon-volume-off'
+						data-fn='_mute' title='Mute'></button>
+			</div>
+			<div id='seek'>
+			   <button class='ui-icon ui-icon-seek-prev' data-fn='_left' title='Rebobinar'></button>
+			   <button class='ui-icon ui-icon-pause' data-fn='_ok' title='Pausar/começar'></button>
+			   <button class='ui-icon ui-icon-seek-next' data-fn='_right' title='Avançar'></button>
+			   <span id='rec' class='action' data-fn='_rec' title='Gravar'></span>
+			   <span id='beggining' class='action' data-fn='watchFromBeggining' title='Recomeçar'></span>
+			   <span class='fav action' title='Adicionar/remover como favorito'></span>
+			</div>
+			<div class='progress'></div>
+		</div>
+		<div id='epg'></div>
+	</div>
+
+	<div id='loader'><img src='ajax-loader.gif' /></div>
+    <div id='erro'>
+  		Nenhuma box IRIS encontrada.
+  		<ul>
+  			<li>A sua box está ligada?</li>
+  			<li>Está ligado à principal rede de casa (e não à FON ZON)?</li>
+  			<li>A app oficial (<a target='_blank' href='https://itunes.apple.com/pt/app/zon-remote/id520110200'>iOS</a> | <a target='_blank' href='https://play.google.com/store/apps/details?id=pt.zon.remote'>Android</a>) funciona? (se não funcionar, é um problema da NOS e deve contactá-los).</li>
+  			<li>A sua box é IRIS?</li>
+  		</ul>
+  		<div style='font-size:80%'>Se nada disto funcionar, experimente ligar o ETH1 da box ao router com um cabo de rede.</div>
+  		<div class='tentar'>Tentar novamente</div>
+	</div>
+
+	<div id='info'><a target='_blank' href='http://luissoares.com' title='Contactos'>luissoares.com</a></div>
+
+  </body>
+</html>
